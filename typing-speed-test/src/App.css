@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f0f2f5;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.target-text {
+  max-width: 600px;
+  font-size: 20px;
+  line-height: 1.6;
+  background: white;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  font-family: "Courier New", monospace;
+}
+
+.typing-box {
+  width: 100%;
+  max-width: 600px;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  resize: none;
+  outline: none;
+  font-family: "Courier New", monospace;
+}
+
+.typing-box:focus {
+  border-color: #6c63ff;
+}
+
+.result-card {
+  margin-top: 20px;
+  background: #e8f5e9;
+  border: 2px solid #4caf50;
+  border-radius: 14px;
+  padding: 16px 30px;
+}
+
+.result-card p {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+.restart-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 24px;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.restart-btn:hover {
+  transform: scale(1.05);
+}
