@@ -1,0 +1,8 @@
+node_modules
+dist
+.output
+.nitro
+.vite
+src/routeTree.gen.ts
+.DS_Store
+*.local
