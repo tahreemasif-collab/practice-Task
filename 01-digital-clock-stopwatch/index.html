@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timekeeper — Clock & Stopwatch</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="stage">
+    <nav class="tabs" role="tablist" aria-label="Timekeeper mode">
+      <button class="tab active" data-tab="clock" role="tab" aria-selected="true">Clock</button>
+      <button class="tab" data-tab="stopwatch" role="tab" aria-selected="false">Stopwatch</button>
+    </nav>
+
+    <section id="clock" class="panel active">
+      <p class="date" id="dateLine">—</p>
+      <h1 class="time" id="clockTime">00:00:00</h1>
+      <div class="zones">
+        <div class="zone"><span class="zone-city">London</span><span class="zone-time" id="zoneLondon">—</span></div>
+        <div class="zone"><span class="zone-city">New York</span><span class="zone-time" id="zoneNY">—</span></div>
+        <div class="zone"><span class="zone-city">Tokyo</span><span class="zone-time" id="zoneTokyo">—</span></div>
+      </div>
+    </section>
+
+    <section id="stopwatch" class="panel">
+      <h1 class="time" id="swTime">00:00.00</h1>
+      <div class="controls">
+        <button id="swStartStop" class="btn primary">Start</button>
+        <button id="swLap" class="btn" disabled>Lap</button>
+        <button id="swReset" class="btn ghost">Reset</button>
+      </div>
+      <ol id="lapList" class="laps"></ol>
+    </section>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

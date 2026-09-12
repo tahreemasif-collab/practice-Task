@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guess It — Number Guessing Game</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="card">
+    <p class="eyebrow">Round <span id="round">1</span></p>
+    <h1>Pick a number between <span id="lo">1</span> and <span id="hi">100</span></h1>
+    <p class="hint" id="hint">I'm thinking of a number — take a guess.</p>
+
+    <form id="guessForm" class="guess-row">
+      <input type="number" id="guessInput" placeholder="Your guess" min="1" max="100" autocomplete="off" required>
+      <button type="submit" class="btn primary">Guess</button>
+    </form>
+
+    <div class="meter">
+      <div class="meter-fill" id="meterFill"></div>
+    </div>
+
+    <div class="stats">
+      <div><span class="stat-num" id="triesLeft">7</span><span class="stat-label">tries left</span></div>
+      <div><span class="stat-num" id="bestScore">–</span><span class="stat-label">best round</span></div>
+    </div>
+
+    <ul class="history" id="history"></ul>
+
+    <button class="btn ghost" id="newGame">New game</button>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

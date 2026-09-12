@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scanline — QR Code Generator</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="panel">
+    <div class="left">
+      <h1>Scanline</h1>
+      <p class="lead">Turn any link or line of text into a scannable QR code — right in your browser.</p>
+
+      <form id="qrForm">
+        <label for="content">Text or URL</label>
+        <textarea id="content" rows="3" placeholder="https://example.com">https://anthropic.com</textarea>
+
+        <div class="row">
+          <div class="field" style="flex:1.3;">
+            <label for="size">Size</label>
+            <select id="size">
+              <option value="200">200px</option>
+              <option value="300" selected>300px</option>
+              <option value="400">400px</option>
+              <option value="500">500px</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fg">Foreground</label>
+            <input type="color" id="fg" value="#1a1a2e">
+          </div>
+          <div class="field">
+            <label for="bg">Background</label>
+            <input type="color" id="bg" value="#ffffff">
+          </div>
+        </div>
+
+        <button type="submit" class="btn primary">Generate QR code</button>
+      </form>
+    </div>
+
+    <div class="right">
+      <div class="qr-frame">
+        <div id="qrcode"></div>
+      </div>
+      <button id="download" class="btn ghost">Download PNG</button>
+    </div>
+  </div>
+
+<script src="qrcode-lib.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

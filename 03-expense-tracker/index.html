@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ledger — Daily Expense Tracker</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <header class="masthead">
+      <h1>Ledger</h1>
+      <p>Track what comes in, track what goes out.</p>
+    </header>
+
+    <section class="summary">
+      <div class="sum-item">
+        <span class="sum-label">Balance</span>
+        <span class="sum-value" id="balance">Rs 0</span>
+      </div>
+      <div class="sum-item income">
+        <span class="sum-label">Income</span>
+        <span class="sum-value" id="totalIncome">Rs 0</span>
+      </div>
+      <div class="sum-item expense">
+        <span class="sum-label">Expense</span>
+        <span class="sum-value" id="totalExpense">Rs 0</span>
+      </div>
+    </section>
+
+    <form id="entryForm" class="entry-form">
+      <input type="text" id="title" placeholder="What was it for?" required>
+      <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+      <select id="type">
+        <option value="expense">Expense</option>
+        <option value="income">Income</option>
+      </select>
+      <button type="submit" class="btn primary">Add entry</button>
+    </form>
+
+    <section class="list-section">
+      <div class="list-head">
+        <span>Recent entries</span>
+        <button id="clearAll" class="link-btn">Clear all</button>
+      </div>
+      <ul id="entryList" class="entry-list"></ul>
+      <p id="emptyState" class="empty">No entries yet — add your first one above.</p>
+    </section>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

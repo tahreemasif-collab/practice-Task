@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyforge — Password Generator</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="terminal">
+    <div class="term-bar">
+      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+      <span class="term-title">keyforge</span>
+    </div>
+
+    <div class="term-body">
+      <p class="prompt">$ generate --password</p>
+
+      <div class="output-row">
+        <code id="passwordOut">••••••••••••</code>
+        <button id="copyBtn" class="icon-btn" title="Copy">Copy</button>
+        <button id="regenBtn" class="icon-btn" title="Regenerate">↻</button>
+      </div>
+
+      <div class="strength">
+        <div class="strength-bar"><div id="strengthFill" class="strength-fill"></div></div>
+        <span id="strengthLabel">—</span>
+      </div>
+
+      <div class="options">
+        <div class="opt-row">
+          <label for="length">length</label>
+          <input type="range" id="length" min="6" max="32" value="16">
+          <span id="lengthVal">16</span>
+        </div>
+
+        <label class="check"><input type="checkbox" id="upper" checked> A–Z uppercase</label>
+        <label class="check"><input type="checkbox" id="lower" checked> a–z lowercase</label>
+        <label class="check"><input type="checkbox" id="numbers" checked> 0–9 numbers</label>
+        <label class="check"><input type="checkbox" id="symbols" checked> !@#$ symbols</label>
+        <label class="check"><input type="checkbox" id="excludeAmbiguous"> exclude ambiguous (l 1 I O 0)</label>
+      </div>
+
+      <button id="generateBtn" class="btn primary">Generate new password</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
