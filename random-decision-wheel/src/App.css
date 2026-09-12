@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f4f9;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.input-row input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  width: 220px;
+}
+
+.input-row button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #4d96ff;
+  color: white;
+  cursor: pointer;
+}
+
+.options-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.option-chip {
+  background: #eee;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.option-chip button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #c0392b;
+}
+
+.wheel-wrapper {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pointer {
+  position: absolute;
+  top: -14px;
+  font-size: 26px;
+  z-index: 2;
+  color: #222;
+}
+
+.wheel {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 6px solid #333;
+  position: relative;
+}
+
+.wheel-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  color: #222;
+  transform-origin: 0 0;
+  white-space: nowrap;
+}
+
+.spin-btn {
+  padding: 14px 36px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.spin-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.winner-card {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #fff3cd;
+  padding: 14px 24px;
+  border-radius: 12px;
+  border: 2px solid #ffcd39;
+}
